@@ -1,6 +1,5 @@
 import { Box, Divider } from "@mui/material";
 import CollapseComponent from "../../components/collapse";
-import { Link } from "react-router-dom";
 
 const Footer = () => {
     return ( 

@@ -1,8 +1,7 @@
-import { Box, ListItemButton, ListItemIcon, ListItemText, List ,Collapse} from "@mui/material";
-import { ReactElement, useState } from "react";
+import { Box, ListItemButton, ListItemIcon, ListItemText, List ,Collapse, Typography} from "@mui/material";
+import { useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import { Link } from "react-router-dom";
 
 const CollapseComponent = ({links,name}:{links:string[],name:string}) => {
     const [open, setOpen] = useState(false);
@@ -24,7 +23,7 @@ const CollapseComponent = ({links,name}:{links:string[],name:string}) => {
             </ListItemIcon>
             <ListItemText primary="Starred" />
           </ListItemButton>
-          {links.map((i)=> <h1>{i}</h1> )}
+          {links.map((i)=> <Typography>{i}</Typography> )}
           
         </List>
       </Collapse>
