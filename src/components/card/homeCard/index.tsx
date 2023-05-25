@@ -1,4 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
+import MyButton from "../../button";
 interface IWithoutLimit {
     contentPosition:"right" | "left",
     img:string,
@@ -6,7 +7,8 @@ interface IWithoutLimit {
     desc:string ,
     button:string,
     xs:number,
-    top?:string
+    top?:string,
+    textColor?:string
 }
 
 const HomeCard = (i:IWithoutLimit) => {
@@ -15,10 +17,10 @@ const HomeCard = (i:IWithoutLimit) => {
             case "right":
                 return (
                     <Grid top={i.top} position={"absolute"} bottom={3} container>
-                        <Grid  px="20px" py="14px" item xs={i.xs}>
+                        <Grid color={i.textColor} px="20px" py="14px" item xs={i.xs}>
                             <Typography fontSize={16} fontWeight={600} variant="h4">{i.title}</Typography>
-                            <Typography fontSize={10} variant="body1">{i.desc}</Typography>
-                            <Button size="small" sx={{fontWeight:600,width:"85px", height:"32px",fontSize:"10px",mt:"8px"}} variant="outlined">{i.button}</Button>
+                            <Typography mb={1} fontSize={10} variant="body1">{i.desc}</Typography>
+                            <MyButton width="103px" height={32} name={i.button} color={i.textColor ? "white" : "black"}/>
                         </Grid>
                     </Grid>
                 );
@@ -27,10 +29,10 @@ const HomeCard = (i:IWithoutLimit) => {
                     <Grid position={"absolute"} bottom={3} container>
                         <Grid item xs={12-i.xs}>
                         </Grid>
-                        <Grid  px="20px" py="14px" left={0} item xs={i.xs}>
+                        <Grid color={i.textColor} px="20px" py="14px" left={0} item xs={i.xs}>
                             <Typography fontSize={16} fontWeight={600} variant="h4">{i.title}</Typography>
-                            <Typography fontSize={10} variant="body1">{i.desc}</Typography>
-                            <Button size="small" sx={{fontWeight:600,width:"85px", height:"32px",fontSize:"10px",mt:"8px"}} variant="outlined">{i.button}</Button>
+                            <Typography mb={1} fontSize={10} variant="body1">{i.desc}</Typography>
+                            <MyButton width="103px" height={32} name={i.button} color={"black"}/>
                         </Grid>
                     </Grid>
                 );

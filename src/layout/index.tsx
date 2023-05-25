@@ -4,6 +4,7 @@ import Footer from "./footer";
 import Header from "./header";
 import { Outlet } from "react-router-dom";
 import { Box } from "@mui/material";
+import CheckGroup from "./footer/Checksgroup";
 const Layout = () => {
     return ( 
         <ThemeProvider theme={MyTheme} >
@@ -11,6 +12,7 @@ const Layout = () => {
         <Box sx={{display:"flex",flexDirection:"column"}}>
             <Header/>
             <Outlet/>
+            <CheckGroup/>
             <Footer/>
         </Box>
         </ThemeProvider>

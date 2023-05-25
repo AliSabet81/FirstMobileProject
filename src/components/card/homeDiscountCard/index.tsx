@@ -1,4 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
+import MyButton from "../../button";
 interface IWithoutLimit {
     position:"right" | "left",
     img:string,
@@ -14,8 +15,8 @@ const HomeDiscountCard = (i:IWithoutLimit) => {
             <Grid position={"absolute"} bottom={6} container>
                 <Grid  px="20px" py="14px" item xs={8}>
                     <Typography fontSize={26} mr={3} fontWeight={600} variant="h4">{i.title}</Typography>
-                    <Typography fontSize={10} variant="body1">{i.desc}</Typography>
-                    <Button size="small" sx={{fontWeight:600,width:"85px", height:"32px",fontSize:"10px",mt:"8px"}} variant="outlined">{i.button}</Button>
+                    <Typography mb={1} fontSize={10} variant="body1">{i.desc}</Typography>
+                    <MyButton width="103px" height={32} name={i.button} color={"black"}/>
                 </Grid>
             </Grid>
         </Box>

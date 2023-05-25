@@ -1,9 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomeScreen from "../screens/home";
 import Layout from "../layout";
+import React from "react";
+const HomeScreen = React.lazy(()=>import("../screens/home"))
+const ShopScreen = React.lazy(()=>import("../screens/shop"))
+const LoginScreen = React.lazy(()=>import("../screens/Auth/login"))
 
 export const ROUTES = {
-    Home : "/"
+    Home : "/",
+    Shop : "/Shop",
+    Login : "/Login"
 }
 export const Router = createBrowserRouter([
     {
@@ -14,7 +19,14 @@ export const Router = createBrowserRouter([
                 path : ROUTES.Home,
                 element : <HomeScreen/>
             },
-            
+            {
+                path : ROUTES.Shop,
+                element : <ShopScreen path={"/shop/brand"}/>
+            },
+            {
+                path : ROUTES.Login,
+                element : <LoginScreen path={"/Auth/Login"}/>
+            }
         ]
     }
 ])
