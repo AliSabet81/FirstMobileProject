@@ -23,7 +23,7 @@ export const Categories : ICategories[] = [
         name:"VERSACE"
     },
     {
-        name:"FENDI"
+        name:"ALI"
     },
     {
         name:"ARMANI"

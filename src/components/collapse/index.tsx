@@ -23,7 +23,7 @@ const CollapseComponent = ({links,name}:{links:string[],name:string}) => {
             </ListItemIcon>
             <ListItemText primary="Starred" />
           </ListItemButton>
-          {links.map((i)=> <Typography>{i}</Typography> )}
+          {links.map((i)=> <Typography key={i}>{i}</Typography> )}
           
         </List>
       </Collapse>

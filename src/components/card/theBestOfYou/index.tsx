@@ -11,7 +11,7 @@ const BestOfYouCard = (i:IBestOfYou) => {
     return ( 
         <Grid justifyContent={"center"} alignItems={"flex-end"} height={252} container>
             <Grid position={"absolute"} height={252} item xs={12} component={"img"} src={i.img} zIndex={"-1"}></Grid>
-            <Grid mb={2} height={139} xs={11}>
+            <Grid item mb={2} height={139} xs={11}>
             <Card sx={{borderRadius:"0"}}>
                 <CardContent sx={{padding:"13px 20px !important",border:2,borderColor:"#C4C4C4",borderRadius:"0"}}>
                     <Box display={"flex"} flexDirection={"column"} justifyContent={"center"}>

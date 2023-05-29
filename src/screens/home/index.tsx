@@ -26,7 +26,7 @@ const HomeScreen = () => {
             
             <Box display={"flex"} flexDirection={"column"} gap={1.8} p={1.7}>
             <Grid container>
-                {Categories.map((i)=><Grid p={1} item xs={6}><MyButton Link="/shop" width="100%" height={55} name={i.name} color={"#C4C4C4"}/></Grid> )}
+                {Categories.map((i)=><Grid key={i.name} p={1} item xs={6}><MyButton Link="/shop" width="100%" height={55} name={i.name} color={"#C4C4C4"}/></Grid> )}
             </Grid>
             <HomeCard img={HomeCard1} title={"CHOOSE YOUR LOOK"} desc={"See our clothing collections"} button={"SEE OFFER"} xs={6} contentPosition={"left"}/>
             <HomeDiscountCard position={"right"} img={HomeCard2} title={"UP TO 40% OFF"} desc={"Special offers and great deals"} button={"SHOP NOW"}/>

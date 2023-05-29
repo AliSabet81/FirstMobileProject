@@ -13,11 +13,11 @@ const ShopScreen = (i:IShopScreen) => {
             <HomeCard contentPosition={"right"} img={WithouLimit1} title={"shoping without limits."} desc={"Choose the best option for you, and it does not matter whether you are."} button={"SHOP NOW"} xs={9}/>
             <Typography my={2} fontSize={14} fontWeight={500} color={"#828282"}>HOME{i.path}</Typography>
             <Grid container>
-                {Products.map((i)=><Grid p={1} item xs={6}><ProductCard img={i.img} category={i.category} name={i.name} price={i.price} index={i.index}/></Grid>)}
+                {Products.map((i)=><Grid key={i.index} p={1} item xs={6}><ProductCard img={i.img} category={i.category} name={i.name} price={i.price} index={i.index} path={""}/></Grid>)}
             </Grid>
             <HomeCard contentPosition={"right"} textColor="white" img={WithouLimit2} title={"shoping without limits."} desc={"Choose the best option for you, and it does not matter whether you are."} button={"SHOP NOW"} xs={9}/>
             <Grid container>
-                {Products.map((i)=><Grid p={1} item xs={6}><ProductCard img={i.img} category={i.category} name={i.name} price={i.price} index={i.index}/></Grid>)}
+                {Products.map((i)=><Grid key={i.index} p={1} item xs={6}><ProductCard img={i.img} category={i.category} name={i.name} price={i.price} index={i.index} path={""}/></Grid>)}
             </Grid>
         </Box>
      );
